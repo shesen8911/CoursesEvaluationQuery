@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
     private FirebaseUser user;
     public static final int RC_SIGN_IN = 1;
     Button Btn;
+    Button Btn2;
     TextView tvMain;
     LinearLayoutCompat layout;
 
@@ -43,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Btn = findViewById(R.id.btn);
+        Btn2 = findViewById(R.id.btn2);
         tvMain = findViewById(R.id.mainTXT);
         layout = findViewById(R.id.mainXML);
         setColor();
@@ -57,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
 
         //已登入直接跳轉
         if (user != null) {
+            Btn2.setVisibility(View.VISIBLE);
             //已驗證就跳轉查詢畫面
             if (user.isEmailVerified()) {
                 Intent intent = new Intent(MainActivity.this, SearchActivity.class);
@@ -89,6 +92,16 @@ public class MainActivity extends AppCompatActivity {
                         AuthUI.getInstance()
                                 .createSignInIntentBuilder()
                                 .setAvailableProviders(providers).build(), RC_SIGN_IN);
+            }
+        });
+
+        Btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mAuth.signOut();
+                Btn.setText("歡迎使用");
+                tvMain.setText("");
+                Btn2.setVisibility(View.GONE);
             }
         });
     }

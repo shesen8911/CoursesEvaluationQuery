@@ -20,4 +20,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
+    <Button
+        android:id="@+id/btn2"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="取消"
+        android:textSize="20sp"/>
+
 </androidx.appcompat.widget.LinearLayoutCompat>

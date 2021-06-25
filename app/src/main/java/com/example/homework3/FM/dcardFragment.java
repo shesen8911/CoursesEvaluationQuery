@@ -75,7 +75,7 @@ public class dcardFragment extends Fragment {
                     });
                 } catch (IOException e) {
                     e.printStackTrace();
-                    progressBar.setVisibility(View.GONE);
+//                    progressBar.setVisibility(View.GONE);
                 }
             };
             new Thread(runnable).start();
