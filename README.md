@@ -57,4 +57,4 @@ Crosslink，需要FB登入，點擊【連結至CROSSLINK】可直接開啟瀏覽
 
 ![image](settings.png)
 ![image](gray.png)
-![image](revers.png)
+![image](reverse.png)
