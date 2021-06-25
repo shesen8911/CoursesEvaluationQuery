@@ -12,7 +12,6 @@
 
 ![image](sign.png)
 
-
 步驟四、註冊完後需要信箱驗證，點【發送電子郵件】
 
 ![image](sendmail.png)
@@ -55,5 +54,7 @@ Crosslink，需要FB登入，點擊【連結至CROSSLINK】可直接開啟瀏覽
 ![image](collect.png)
 
 步驟十、【設定】調背景顏色為灰色，且關閉程式再開啟一樣維持灰色
+
 ![image](settings.png)
 ![image](gray.png)
+![image](revers.png)
