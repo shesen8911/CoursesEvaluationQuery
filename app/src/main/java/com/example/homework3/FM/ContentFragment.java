@@ -87,7 +87,7 @@ public class ContentFragment extends Fragment {
                     //content要再另外爬蟲 所以要多執行緒
                     if (args.getSite().equals("ptt")) {
                         content = ptt_findContent(args.getHref());
-                        content = "作者\n" + args.getLeft() + "\n標題\n" + args.getTitle() + "\n時間\n" + content;
+                        content = args.getLeft() + "\n標題\n" + args.getTitle() + "\n時間\n" + content;
                     }
                     if (args.getSite().equals("dcard")) {
                         content = dcard_findContent(args.getHref());
@@ -103,7 +103,7 @@ public class ContentFragment extends Fragment {
                             }
                         });
 //                        content = crosslink_findContent(args.getHref());
-                        content = args.getTitle() + "\nCrosslink讀取資料待開發中~因需要FB OAUTH授權登入，若要瀏覽請按下方按鈕，將導至Crosslink。";
+                        content = args.getTitle() + "\n\nCrosslink讀取資料待開發中~因需要FB OAUTH授權登入，若要瀏覽請按下方按鈕，將導至Crosslink。";
                     }
                     getActivity().runOnUiThread(() -> {
                         contentTV.setText(content);
