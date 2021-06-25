@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/searchFragment">
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.homework3.FM.SearchFragment"
+        android:label="查詢課程"
+        tools:layout="@layout/fragment_search">
+        <action
+            android:id="@+id/action_searchFragment_to_contentFragment"
+            app:destination="@id/contentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/contentFragment"
+        android:name="com.example.homework3.FM.ContentFragment"
+        android:label="課程內容"
+        tools:layout="@layout/fragment_content">
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <argument
+            android:name="left"
+            app:argType="string" />
+        <argument
+            android:name="right"
+            app:argType="string" />
+        <argument
+            android:name="href"
+            app:argType="string" />
+        <argument
+            android:name="site"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/collectFragment"
+        android:name="com.example.homework3.FM.CollectFragment"
+        android:label="收藏"
+        tools:layout="@layout/fragment_collect">
+        <action
+            android:id="@+id/action_collectFragment_to_contentFragment"
+            app:destination="@id/contentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.homework3.FM.SettingsFragment"
+        android:label="設定" />
+    <fragment
+        android:id="@+id/homepageFragment"
+        android:name="com.example.homework3.HomepageFragment"
+        android:label="台科大課程評價查詢"
+        tools:layout="@layout/fragment_homepage">
+        <action
+            android:id="@+id/action_homepageFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+    </fragment>
+</navigation>

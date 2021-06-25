@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_searchXML"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    tools:context=".FM.SearchFragment">
+
+    <EditText
+        android:id="@+id/edtSearch"
+        android:layout_width="318dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:hint="Search"
+        android:textColorHint="#808080"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="確定"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.google.android.material.tabs.TabLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tab_layout">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabPTT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PTT" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabDcard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DCARD" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabCrosslink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CROSSLINK" />
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/view_pager2"/>
+
+</androidx.appcompat.widget.LinearLayoutCompat>
