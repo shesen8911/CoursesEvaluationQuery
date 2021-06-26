@@ -60,9 +60,6 @@ public class dcardFragment extends Fragment {
                     String url = "https://www.dcard.tw/search?query="+search+"&forum=ntust";
                     final Document document = SearchFragment.analyzeHTML(url);
 
-//                    Elements elements = document.getElementsByClass("tgn9uw-0 bReysV");
-//                    String s = elements.get(1).text();
-//                    System.out.println(s);
                     //網頁的主Class
                     Elements elements = document.getElementsByClass("tgn9uw-0 bReysV");
                     GroupCardData = findThree(elements);

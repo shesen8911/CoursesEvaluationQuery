@@ -67,15 +67,11 @@ public class pttFragment extends Fragment {
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView.addItemDecoration(new DividerItemDecoration(getActivity(), DividerItemDecoration.VERTICAL));
         progressBar = getView().findViewById(R.id.progressBarSearch);
-
-        System.out.println("ptt_onViewStateRestored");
     }
 
     @Override
     public void onStart() {
         super.onStart();
-
-        System.out.println("ptt_onStart");
 
         //判斷是否原本偵測過，只是按了詳細
         if(GroupCardData.size() > 0) {
@@ -95,10 +91,6 @@ public class pttFragment extends Fragment {
                     //網頁的主Class
                     Elements elements = document.getElementsByClass("r-ent");
                     GroupCardData = findThree(elements);
-
-                    //抓每行的網址
-//                                elements = document.select("div.title > a");
-//                                GroupCardData = findContent(elements);
 
                     getActivity().runOnUiThread(() -> {
                         cardAdapter = new CardAdapter(GroupCardData, getActivity());
@@ -137,14 +129,5 @@ public class pttFragment extends Fragment {
             GroupCardData.add(cardData);
         }
         return  GroupCardData;
-    }
-
-    //重新抓RV
-    private void resetAdapter() {
-        if(GroupCardData.size() > 0) {
-            cardAdapter.notifyItemRangeRemoved(0, GroupCardData.size());
-            cardAdapter = new CardAdapter(GroupCardData, getActivity());
-            recyclerView.setAdapter(cardAdapter);
-        }
     }
 }

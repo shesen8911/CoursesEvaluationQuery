@@ -48,15 +48,12 @@ public class SearchFragment extends Fragment {
         super.onViewStateRestored(savedInstanceState);
         SearchEdt = getView().findViewById(R.id.edtSearch);
         SearchEdt.setText(search);
-        System.out.println("SF_onviewStateRestored");
     }
 
     @Override
     public void onStart() {
-
-        System.out.println("SF_Start");
-
         super.onStart();
+
         layout = getActivity().findViewById(R.id.fragment_searchXML);
         SearchBtn = getActivity().findViewById(R.id.btnSearch);
         tabLayout = getActivity().findViewById(R.id.tab_layout);
