@@ -42,7 +42,7 @@ public class SearchFragment extends Fragment {
     FragmentAdapter fragmentAdapter;
 
 
-    // 有沒有什麼快速使用recyclerView的方法啊= =
+    // 有沒有什麼快速使用lifeCycle的方法啊= =
     @Override
     public void onViewStateRestored(@Nullable Bundle savedInstanceState) {
         super.onViewStateRestored(savedInstanceState);
