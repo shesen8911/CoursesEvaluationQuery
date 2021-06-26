@@ -103,7 +103,7 @@ public class ContentFragment extends Fragment {
                             }
                         });
 //                        content = crosslink_findContent(args.getHref());
-                        content = args.getTitle() + "\n\nCrosslink讀取資料待開發中~因需要FB OAUTH授權登入，若要瀏覽請按下方按鈕，將導至Crosslink。";
+                        content = args.getTitle() + "\n\nCrosslink讀取資料待開發中~因需要FB OAUTH授權登入，若要瀏覽請按下方按鈕，將為您導至Crosslink網頁。";
                     }
                     getActivity().runOnUiThread(() -> {
                         contentTV.setText(content);
@@ -296,7 +296,9 @@ public class ContentFragment extends Fragment {
     public void openWebPage(String url) {
         Uri webpage = Uri.parse(url);
         Intent intent = new Intent(Intent.ACTION_VIEW, webpage);
-        startActivity(intent);
+        if (intent.resolveActivity(getActivity().getPackageManager()) != null) {
+            startActivity(intent);
+        }
 //        getFragmentManager().beginTransaction().remove(ContentFragment.this).commit();
     }
 }

@@ -76,7 +76,6 @@ public class crosslinkFragment extends Fragment {
             };
             new Thread(runnable).start();
         } else {
-            Toast.makeText(getActivity(), "請連接網路", Toast.LENGTH_SHORT).show();
             progressBar.setVisibility(View.GONE);
         }
     }
