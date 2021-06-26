@@ -1,4 +1,9 @@
 # 台科課程評價查詢
+
+https://github.com/shesen8911/CoursesEvaluationQuery
+
+主要利用Jsoup爬蟲抓取資料
+
 若出現Invalid JDK configuration found，請關閉Android Studio，
 並刪除本程式的.idea及.gradle檔，再次開啟即可使用。
 
